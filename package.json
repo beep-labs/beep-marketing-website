@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-plus-vite",
-  "version": "0.2.2",
-  "description": "A clean and simple Eleventy 2 Starter Kit with Vite",
+  "name": "beep-labs-marketing-website",
+  "version": "0.0.1",
+  "description": "Beep marketing website repo",
   "browserslist": [
     "> 0.5%",
     "not IE 11"
@@ -13,7 +13,8 @@
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "build": "npx @11ty/eleventy",
     "clean": "del-cli dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx only-allow pnpm"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,6 @@
     "luxon": "^3.0.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
-    "npm-run-all": "^4.1.5",
     "postcss-nesting": "^10.1.10",
     "rollup-plugin-critical": "^1.0.12",
     "sass": "^1.53.0",

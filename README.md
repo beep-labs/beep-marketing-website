@@ -27,7 +27,7 @@ Start by [generating a new repository based on this project](https://github.com/
 After cloning (or downloading) the repository to your local machine, install all dependencies with the command
 
 ```sh
-npm install
+pnpm install
 ```
 
 ## Run dev server
@@ -35,36 +35,23 @@ npm install
 The project comes with Eleventy’s built-in development server. You can start the server with
 
 ```sh
-npm start
+pnpm start
 ````
-
-or
-
-```sh
-npx @11ty/eleventy --serve
-````
-
 
 ## Build
 
 To trigger a production build, use
 
 ```sh
-npm run build
+pnpm run build
 ````
-
-or
-
-```sh
-npx @11ty/eleventy
-```
 
 ## Deploy a fork of this template to Netlify
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/matthiasott/eleventy-plus-vite)
 
 ## CSS
-By default, this starter project uses Sass with an opinionated folder structure. Feel free to replace this structure with your own. If you prefer to write standards-compliant, good old plain CSS, this is also supported. Nesting is then possible via the [PostCSS Nesting plugin](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-nesting), following the [CSS Nesting specification](https://drafts.csswg.org/css-nesting-1/). 
+By default, this starter project uses Sass with an opinionated folder structure. Feel free to replace this structure with your own. If you prefer to write standards-compliant, good old plain CSS, this is also supported. Nesting is then possible via the [PostCSS Nesting plugin](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-nesting), following the [CSS Nesting specification](https://drafts.csswg.org/css-nesting-1/).
 
 [Autoprefixer](https://github.com/postcss/autoprefixer) adds necessary browser prefixes. The [browserslist](https://github.com/browserslist/browserslist) settings can be adjusted in `package.json`.
 
