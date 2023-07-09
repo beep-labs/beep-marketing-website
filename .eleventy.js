@@ -45,8 +45,8 @@ module.exports = function (eleventyConfig) {
 						entryFileNames: 'assets/js/[name].[hash].js'
 					},
 					plugins: [rollupPluginCritical({
-							criticalUrl: './dist/',
-							criticalBase: './dist/',
+							criticalUrl: './_site/',
+							criticalBase: './_site/',
 							criticalPages: [
 								{ uri: 'index.html', template: 'index' },
 								{ uri: 'posts/index.html', template: 'posts/index' },
@@ -127,7 +127,7 @@ module.exports = function (eleventyConfig) {
 		dir: {
 			input: 'src',
 			// better not use "public" as the name of the output folder (see above...)
-			output: 'dist',
+			output: '_site',
 			includes: '_includes',
 			layouts: 'layouts',
 			data: '_data'
