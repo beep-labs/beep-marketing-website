@@ -35,7 +35,7 @@ pnpm install
 The project comes with Eleventy’s built-in development server. You can start the server with
 
 ```sh
-pnpm dev
+pnpm run dev
 ````
 
 ## Build
