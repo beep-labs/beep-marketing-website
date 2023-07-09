@@ -1,25 +1,27 @@
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
 
-const EleventyPluginNavigation = require('@11ty/eleventy-navigation')
-const EleventyPluginRss = require('@11ty/eleventy-plugin-rss')
-const EleventyPluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite')
+const EleventyPluginNavigation = require('@11ty/eleventy-navigation');
+const EleventyPluginRss = require('@11ty/eleventy-plugin-rss');
+const EleventyPluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
+const eleventyGoogleFonts = require('eleventy-google-fonts');
 
-const rollupPluginCritical = require('rollup-plugin-critical').default
+const rollupPluginCritical = require('rollup-plugin-critical').default;
 
-const filters = require('./utils/filters.js')
-const transforms = require('./utils/transforms.js')
-const shortcodes = require('./utils/shortcodes.js')
+const filters = require('./utils/filters.js');
+const transforms = require('./utils/transforms.js');
+const shortcodes = require('./utils/shortcodes.js');
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setServerPassthroughCopyBehavior('copy');
 	eleventyConfig.addPassthroughCopy("public");
 
 	// Plugins
-	eleventyConfig.addPlugin(EleventyPluginNavigation)
-	eleventyConfig.addPlugin(EleventyPluginRss)
-	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
+	eleventyConfig.addPlugin(EleventyPluginNavigation);
+	eleventyConfig.addPlugin(EleventyPluginRss);
+	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight);
+	eleventyConfig.addPlugin(eleventyGoogleFonts);
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
 		tempFolderName: '.11ty-vite', // Default name of the temp folder
 
@@ -70,7 +72,7 @@ module.exports = function (eleventyConfig) {
 								],
 								penthouse: {
 									forceInclude: ['.fonts-loaded-1 body', '.fonts-loaded-2 body'],
-								  }
+								}
 							}
 						})
 					]
@@ -82,19 +84,17 @@ module.exports = function (eleventyConfig) {
 	// Filters
 	Object.keys(filters).forEach((filterName) => {
 		eleventyConfig.addFilter(filterName, filters[filterName])
-	})
+	});
 
 	// Transforms
 	Object.keys(transforms).forEach((transformName) => {
 		eleventyConfig.addTransform(transformName, transforms[transformName])
-	})
+	});
 
 	// Shortcodes
 	Object.keys(shortcodes).forEach((shortcodeName) => {
 		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
-	})
-
-	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)
+	});
 
 	// Customize Markdown library and settings:
 	let markdownLibrary = markdownIt({
@@ -109,16 +109,16 @@ module.exports = function (eleventyConfig) {
 			level: [1, 2, 3, 4]
 		}),
 		slugify: eleventyConfig.getFilter('slug')
-	})
-	eleventyConfig.setLibrary('md', markdownLibrary)
+	});
+	eleventyConfig.setLibrary('md', markdownLibrary);
 
 	// Layouts
-	eleventyConfig.addLayoutAlias('base', 'base.njk')
-	eleventyConfig.addLayoutAlias('post', 'post.njk')
+	eleventyConfig.addLayoutAlias('base', 'base.njk');
+	eleventyConfig.addLayoutAlias('post', 'post.njk');
 
 	// Copy/pass-through files
-	eleventyConfig.addPassthroughCopy('src/assets/css')
-	eleventyConfig.addPassthroughCopy('src/assets/js')
+	eleventyConfig.addPassthroughCopy('src/assets/css');
+	eleventyConfig.addPassthroughCopy('src/assets/js');
 
 	return {
 		templateFormats: ['md', 'njk', 'html', 'liquid'],

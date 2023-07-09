@@ -35,6 +35,9 @@ devDependencies:
   del-cli:
     specifier: ^4.0.1
     version: 4.0.1
+  eleventy-google-fonts:
+    specifier: ^0.1.0
+    version: 0.1.0
   eslint:
     specifier: ^8.44.0
     version: 8.44.0
@@ -1667,6 +1670,10 @@ packages:
 
   /electron-to-chromium@1.4.454:
     resolution: {integrity: sha512-pmf1rbAStw8UEQ0sr2cdJtWl48ZMuPD9Sto8HVQOq9vx9j2WgDEN6lYoaqFvqEHYOmGA9oRGn7LqWI9ta0YugQ==}
+    dev: true
+
+  /eleventy-google-fonts@0.1.0:
+    resolution: {integrity: sha512-icaJjAPEvGMFvbdogLt+gZXor8JQRh6+ZA9v1yxx/fZ2/d+XPYDZIG1HYmvSqScN4AMx3f1Vq+RQ6iE8my6p8Q==}
     dev: true
 
   /encodeurl@1.0.2:

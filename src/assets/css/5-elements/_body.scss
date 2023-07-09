@@ -1,6 +1,23 @@
+// FOFT fix
+.fonts-loaded-1 {
+	--font-family-body: 'Inter Subset', serif;
+	--font-family-header: 'Fraunces Subset', sans-serif;
+}
+
+.fonts-loaded-2 {
+	--font-family-body: 'Inter', serif;
+	--font-family-header: 'Fraunces', sans-serif;
+}
+// End FOFT fix
+
 body {
-    color: var(--textColor);
-    background-color: var(--backgroundColor);
-    padding-right: var(--scrollbarComp);
-    overflow-x: hidden;
+	color: var(--textColor);
+	background-color: var(--backgroundColor);
+	font-family: var(--font-family-body, sans-serif);
+	padding-right: var(--scrollbarComp);
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-header, sans-serif);
 }
