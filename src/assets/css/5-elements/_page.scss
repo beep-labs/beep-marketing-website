@@ -18,7 +18,7 @@ html {
 	//-moz-osx-font-smoothing: grayscale; /* [2] */
 	//-webkit-font-smoothing: antialiased; /* [2] */
 	height: stretch; /* [3] */
-	line-height: var(--base-line-height, 1.25); /* [1] */
+	line-height: var(--base-line-height, 1.6); /* [1] */
 	position: relative; /* [4] */
 	scroll-padding-top: var(--base-scroll-padding, 70px); /* [5] */
 	text-rendering: optimizespeed; /* [6] */
@@ -41,6 +41,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .u-text-title {
 	font-family: var(--font-family-header, sans-serif);
+	line-height: var(--base-line-height, 1.25); /* [1] */
 }
 
 h1, .h1,
