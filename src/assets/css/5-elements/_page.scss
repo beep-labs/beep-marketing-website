@@ -12,13 +12,10 @@
 
 html {
 	background-color: #FAF8FF;
-	color: var(--textColor);
-	font-family: var(--font-family-body, serif);
 	font-size: 1em; /* [1] */
 	//-moz-osx-font-smoothing: grayscale; /* [2] */
 	//-webkit-font-smoothing: antialiased; /* [2] */
 	height: stretch; /* [3] */
-	line-height: var(--base-line-height, 1.6); /* [1] */
 	position: relative; /* [4] */
 	scroll-padding-top: var(--base-scroll-padding, 70px); /* [5] */
 	text-rendering: optimizespeed; /* [6] */
@@ -33,7 +30,10 @@ html {
 
 body {
 	background: linear-gradient(145deg, #FAF8FF 41.67%, #CEC1F1 100%);
+	color: var(--textColor);
+	font-family: var(--font-family-body, serif);
 	font-size: var(--base-font-size);
+	line-height: var(--base-line-height, 1.6); /* [1] */
 	min-height: 100vh; /* [3] */
 	min-height: stretch; /* [3] */
 }
