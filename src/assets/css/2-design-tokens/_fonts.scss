@@ -2,6 +2,7 @@
 	font-family: 'Fraunces Subset';
 	src: url('/assets/fonts/fraunces/fraunces-v31-latin-regular.woff2') format('woff2');
 	unicode-range: U+21-80,U+91-94,U+BF-D6,U+D8-F6,U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
+	font-display: swap;
 }
 
 @font-face {
@@ -9,6 +10,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local(''), url('/assets/fonts/fraunces/fraunces-v31-latin-regular.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
@@ -16,6 +18,7 @@
 	font-style: normal;
 	font-weight: 100;
 	src: local(''), url('/assets/fonts/fraunces/fraunces-v31-latin-100.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
@@ -23,12 +26,14 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local(''), url('/assets/fonts/fraunces/fraunces-v31-latin-700.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Inter Subset';
 	src: url('/assets/fonts/inter/inter-v12-latin-regular.woff2') format('woff2');
 	unicode-range: U+21-80,U+91-94,U+BF-D6,U+D8-F6,U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
+	font-display: swap;
 }
 
 @font-face {
@@ -36,6 +41,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local(''), url('/assets/fonts/inter/inter-v12-latin-regular.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
@@ -43,6 +49,7 @@
 	font-style: normal;
 	font-weight: 100;
 	src: local(''), url('/assets/fonts/inter/inter-v12-latin-100.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
@@ -50,4 +57,5 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local(''), url('/assets/fonts/inter/inter-v12-latin-700.woff2') format('woff2');
+	font-display: swap;
 }
