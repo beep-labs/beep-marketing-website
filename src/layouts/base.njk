@@ -6,6 +6,7 @@
 	<title>{{ meta.title }}</title>
 
 	<link rel="preload" href="{{ 'fraunces/fraunces-v31-latin-regular.woff2' | font_path }}" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="{{ 'inter/inter-v12-latin-regular.woff2' | font_path }}" as="font" type="font/woff2" crossorigin="">
 
 	{% include "meta.njk" %}
 
@@ -20,12 +21,16 @@
 			}
 
 			await document.fonts.load("1em 'Fraunces Subset'");
+			await document.fonts.load("1em 'Inter Subset'");
 
 			document.documentElement.className += " fonts-loaded-1";
 			await Promise.all([
 				document.fonts.load("400 1em 'Fraunces'"),
 				document.fonts.load("100 1em 'Fraunces'"),
 				document.fonts.load("700 1em 'Fraunces'"),
+				document.fonts.load("400 1em 'Inter'"),
+				document.fonts.load("100 1em 'Inter'"),
+				document.fonts.load("700 1em 'Inter'"),
 			]);
 
 			document.documentElement.className += " fonts-loaded-2";
