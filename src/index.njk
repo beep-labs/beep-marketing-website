@@ -23,12 +23,12 @@ order: 1
 			<p class="u-hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
 			<label class="u-flex u-flex-col u-gap-[6px]">
 				Email address*
-				<input type="email" name="email" class="u-block u-border u-border-black u-py-[4px] u-px-[2px]">
+				<input required type="email" name="email" class="u-block u-border u-border-black u-py-[4px] u-px-[2px]">
 			</label>
 
 			<label class="u-flex u-gap-[6px] u-items-start">
-				<input type="checkbox" name="marketing_opt_in" class="u-mt-[3px]">
-				Email me with updates about Beep and early access
+				<input required type="checkbox" name="marketing_opt_in" class="u-mt-[3px]">
+				Email me with updates about Beep and early access*
 			</label>
 			<button type="submit" class="u-rounded-full u-mt-[16px] u-py-[12px] u-px-[24px] u-bg-white u-inline-block u-border u-border-black u-text-[#222] u-font-bold">Submit</button>
 		</form>
