@@ -5,7 +5,6 @@ const EleventyPluginNavigation = require('@11ty/eleventy-navigation');
 const EleventyPluginRss = require('@11ty/eleventy-plugin-rss');
 const EleventyPluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
-const eleventyGoogleFonts = require('eleventy-google-fonts');
 
 const rollupPluginCritical = require('rollup-plugin-critical').default;
 
@@ -21,7 +20,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyPluginNavigation);
 	eleventyConfig.addPlugin(EleventyPluginRss);
 	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight);
-	eleventyConfig.addPlugin(eleventyGoogleFonts);
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
 		tempFolderName: '.11ty-vite', // Default name of the temp folder
 

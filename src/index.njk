@@ -1,17 +1,37 @@
 ---
 layout: base
 eleventyNavigation:
-  key: Home
-  order: 1
+key: Home
+order: 1
 ---
 
-<p class="u-text-center">
-	<span>Customer Engagement Platform</span>
-	<span>x</span>
-	<span>Powerful Notification Infrastructure</span>
-</p>
-<h1>Customer engagement and user notifications made easy by the most powerful notifications infrastructure</h1>
-<p>Beep combines a powerful notifications infrastructure with expert, cross-channel marketing
-	tools. We power unified customer experiences, allowing you to create, optimise and measure
-	interactions across the entire customer journey, while providing the scale and flexibility to
-	be the best notifications infrastructure you never had to build.</p>
+<div class="o-wrapper u-mt-[25px] md:u-mt-[40px]">
+	<div class="o-content u-max-w-[64ch] u-text-center">
+		<p class="u-text-[12px]">A modern, unified platform for marketing and engineering teams</p>
+		<h1 class="u-text-[28px] md:u-text-[40px]">Effortless notifications & customer&nbsp;engagement</h1>
+		<p>
+			Expert, cross-channel marketing tools and a powerful, flexible notifications infrastructure.
+			Create, optimise and measure interactions across the entire customer journey, with the best
+			notifications infrastructure you never had to build.
+		</p>
+	</div>
+
+	<div class="o-content u-max-w-[300px] u-mt-[80px] u-mb-[40px]">
+		<h2 class="u-mb-[20px]">Sign up for early access</h2>
+
+		<form name="early-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="u-flex u-flex-col u-gap-[16px]">
+			<p class="u-hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+			<label class="u-flex u-flex-col u-gap-[6px]">
+				Email address*
+				<input type="email" name="email" class="u-block u-border u-border-black u-py-[4px] u-px-[2px]">
+			</label>
+
+			<label class="u-flex u-gap-[6px] u-items-start">
+				<input type="checkbox" name="marketing_opt_in" class="u-mt-[3px]">
+				Email me with updates about Beep and early access
+			</label>
+			<button type="submit" class="u-rounded-full u-mt-[16px] u-py-[12px] u-px-[24px] u-bg-white u-inline-block u-border u-border-black u-text-[#222] u-font-bold">Submit</button>
+		</form>
+
+	</div>
+</div>

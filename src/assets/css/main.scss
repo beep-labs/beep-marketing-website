@@ -1,34 +1,41 @@
+@import "tailwindcss/base";
+
 /* 1. Settings */
-@use '../../../node_modules/cssremedy/css/remedy';
-@use "1-settings/global";
+@import '../../../node_modules/cssremedy/css/remedy';
+@import "1-settings/global";
 
 /* 2. Design Tokens */
-@use "2-design-tokens/colors";
-@use "2-design-tokens/fonts";
-@use "2-design-tokens/media-queries";
-@use "2-design-tokens/spacing";
-@use "2-design-tokens/typography";
+@import "2-design-tokens/colors";
+@import "2-design-tokens/fonts";
+@import "2-design-tokens/media-queries";
+@import "2-design-tokens/spacing";
+@import "2-design-tokens/typography";
+
+@import "tailwindcss/components";
 
 /* 3. Tools */
 
 /* 4. Generic */
-@use "4-generic/normalize";
+@import "4-generic/normalize";
 
 /* 5. Elements */
-@use "5-elements/body";
-@use "5-elements/lists";
+@import "5-elements/page";
+@import "5-elements/lists";
 
 // 6. Skeleton
-@use "6-skeleton/layouts";
+@import "6-skeleton/content";
+@import "6-skeleton/layouts";
 
 // 7. Components
-@use "7-components/header";
-@use "7-components/footer";
+@import "7-components/header";
+@import "7-components/footer";
+
+@import "tailwindcss/utilities";
 
 // 8. Utilities
-@use "8-utilities/accessibility";
-@use "8-utilities/modifiers";
-@use "8-utilities/states";
+@import "8-utilities/accessibility";
+@import "8-utilities/modifiers";
+@import "8-utilities/states";
 
 /* Shame on you! */
-@use "shame";
+@import "shame";
